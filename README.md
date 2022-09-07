@@ -20,6 +20,16 @@ This sections below highlight the approach towards refactoring code in VBA for t
 
 ### Stock Performance (2017 & 2018)
 
+The annual return for the tickers under review convey 2 different stories for 2017 and 2018. The annual return for 4 of the 12 stocks for 2017 were more than a 100% return rate. This means your investment at the start of the year would have doubled by the end of the year for those stocks. Furthermore, 11/12 stocks had a positive return rate, which indicates a diversified investment would give you a healthy return.
+
+Although, in 2018 the story is different. Almost 1/3rd the stocks in 2018 has lost more than 40% of thier stock value, whilst a majority of the sotcks (10/12) have shown a negative return for 2018.
+
+Given the high returns for 2017 and decline in 2018, the tickers analyzed show a higher degree of volatility and it is recommended to analyze additional stocks under green energy sector or to look at a longer timeframe of analysis.
+
+The comparison of 2017 and 2018 stock data can be seen below;
+
+![2017_vs_2018_Annual_Returns](/Other/2017 vs 2018 Stock Output.png)
+
 ### Execution Time - Original Script
 
 ### Execution Time - Refactored Script

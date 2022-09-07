@@ -45,3 +45,9 @@ Once we refactor the initial VBA code into a single loop the script was able to 
 The output timing of the refactored script can be seen on the image below;
 
 ![Refactored_Script](/Other/Refactored_Script.png)
+
+## Summary
+
+### Advantages and Disadvantages of Refactored Code
+
+### Application of Pros and Cons to Original VBA Script

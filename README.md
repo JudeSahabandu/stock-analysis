@@ -32,4 +32,10 @@ The comparison of 2017 and 2018 stock data can be seen below;
 
 ### Execution Time - Original Script
 
+Cosidering the output from the original script, the VBA script has multiple loops running which causes the code to be slightly inefficient. This results in the execution of the script to take almost a full second each (0.95 secs) to run and provide the complete output for each years output. 
+
+The output timing can be seen on the image below;
+
+![Original_Script](/Other/Original_Script.png)
+
 ### Execution Time - Refactored Script

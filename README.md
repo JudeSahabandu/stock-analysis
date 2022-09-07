@@ -36,7 +36,7 @@ Cosidering the output from the original script, the VBA script has multiple loop
 
 When executing the code in the original script, we only initialize arrays for all the tickers using `Dim tickers(12) As String` and index each variable for all tickers starting from index = 0 to index = 11.
 
-Then we loop over all rows using a `For Loop` and utilize the `If Then` statement for current tickers to obtain the totalVolume, tickerStartingPrices and tickerEndingPrices for current ticker. (Note examples of code used can be seen in attached VBA_Challenge.xlsm file under Module1 in VBA)
+Then we loop over all rows using a `For Loop` and utilize the `If Then` statement for current tickers to obtain the totalVolume, tickerStartingPrices and tickerEndingPrices for current ticker. (Note examples of code used can be seen in attached VBA_Challenge.xlsm file under **Module1** in VBA)
 
 The outputs are then assigned to the "All Stocks Analysis" worksheet using the appropriate code and formatting.
 
@@ -48,7 +48,23 @@ The output format and timing can be seen on the image below;
 
 Once we refactor the initial VBA code into a single loop the script was able to run more efficiently. This can be seen in the run time of the script in the VBA output where both years analysis output time almost cut by 75%, where each script ran in under (0.20 secs).
 
-The output timing of the refactored script can be seen on the image below;
+When executing the code in the refactored script, in addition to the initialized array all the tickers using `Dim tickers(12) As String`, We also created new arrays for tickerVolumes, tickerStartingPrices and tickerEndingPrices as follows;
+
+`Dim tickerVolumes(12) As Long`
+`Dim tickerStartingPrices(12) As Single`
+`Dim tickerEndingPrices(12) As Single`
+
+Prior to this we created a new tickerIndex variable and initialized this to = 0
+
+`tickerIndex = 0`
+
+The above variable was used to access the correct variables across all 4 arrays created.
+
+Then we loop over all rows using a `For Loop` and utilize the `If Then` statements to obtain the totalVolume, tickerStartingPrices and tickerEndingPrices for current ticker. (Note examples of code used can be seen in attached VBA_Challenge.xlsm file under **Module3** in VBA)
+
+The outputs are then assigned to the "All Stocks Analysis" worksheet using the appropriate code and formatting.
+
+The output format and timing can be seen on the image below;
 
 ![Refactored_Script](/Other/Refactored_Script.png)
 

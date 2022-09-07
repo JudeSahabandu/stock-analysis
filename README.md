@@ -84,4 +84,4 @@ Given the pro's and con's in analysing the stock-analysis data through VBA throu
 
 The absolute run time does not seem much of a difference as a >1 second run time seems fairly efficient, but in relation to a 0.16 run time, the original script needs atleast 6 times longer to run and provide the same output.
 
-Despite this cleaner and efficient approach of using a refactored script, the additional time spent refactoring was significant compared to the time saved in running the analysis. Furthermore, a less experienced analyst may not clearly understand what additional lines of code were used to refactor the data, so it is crucial that appropriate statements are used to define changes made when refactoring the code.
+Despite the cleaner and efficient approach of using a refactored script, the additional time spent refactoring was significant compared to the time saved in running the analysis. Furthermore, a less experienced analyst may not clearly understand what additional lines of code were used to refactor the data, so it is crucial that appropriate statements are used to define changes made when refactoring the code.

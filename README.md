@@ -78,4 +78,10 @@ The key observable advantages of refactored code is, the code is cleaner and mor
 
 Considering disadvantages, refactoring code requires a higher level of competence and may be time consuming. It may not be worthwhile pursuing for smaller analytical outputs. But given the advantages it is best to pursue refactored code to build competence and automate task further.
 
-### Application of Pros and Cons to Original VBA Script
+### Application of Pros and Cons to Original and Refactored VBA Script
+
+Given the pro's and con's in analysing the stock-analysis data through VBA through both scripts, the obvious standout advantage is the run time of the script after refactoring it. In the original script the run time was near 0.95 seconds for each year the script was run (2017 and 2018). But, post refactoring this was brought down to about 0.17 seconds run time once refactored. 
+
+The absolute run time does not seem much of a difference as a >1 second run time seems fairly efficient, but in relation to a 0.16 run time, the original script needs atleast 6 times longer to run and provide the same output.
+
+Despite this cleaner and efficient approach of using a refactored script, the additional time spent refactoring was significant compared to the time saved in running the analysis. Furthermore, a less experienced analyst may not clearly understand what additional lines of code were used to refactor the data, so it is crucial that appropriate statements are used to define changes made when refactoring the code.

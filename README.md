@@ -28,8 +28,6 @@ Given the high returns for 2017 and decline in 2018, the tickers analyzed show a
 
 The comparison of 2017 and 2018 stock data can be seen below;
 
-![2017_vs_2018_Annual_Returns](/Other/2017 vs 2018 Stock Output.png)
-
 ### Execution Time - Original Script
 
 ### Execution Time - Refactored Script

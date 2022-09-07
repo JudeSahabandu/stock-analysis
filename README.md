@@ -34,7 +34,13 @@ The comparison of 2017 and 2018 stock data can be seen below;
 
 Cosidering the output from the original script, the VBA script has multiple loops running which causes the code to be slightly inefficient. This results in the execution of the script to take almost a full second each (0.95 secs) to run and provide the complete output for each years output. 
 
-The output timing can be seen on the image below;
+When executing the code in the original script, we only initialize arrays for all the tickers using `Dim tickers(12) As String` and index each variable for all tickers starting from index = 0 to index = 11.
+
+Then we loop over all rows using a `For Loop` and utilize the `If Then` statement for current tickers to obtain the totalVolume, tickerStartingPrices and tickerEndingPrices for current ticker. (Note examples of code used can be seen in attached VBA_Challenge.xlsm file under Module1 in VBA)
+
+The outputs are then assigned to the "All Stocks Analysis" worksheet using the appropriate code and formatting.
+
+The output format and timing can be seen on the image below;
 
 ![Original_Script](/Other/Original_Script.png)
 

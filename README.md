@@ -39,3 +39,9 @@ The output timing can be seen on the image below;
 ![Original_Script](/Other/Original_Script.png)
 
 ### Execution Time - Refactored Script
+
+Once we refactor the initial VBA code into a single loop the script was able to run more efficiently. This can be seen in the run time of the script in the VBA output where both years analysis output time almost cut by 75%, where each script ran in under (0.20 secs).
+
+The output timing of the refactored script can be seen on the image below;
+
+![Refactored_Script](/Other/Refactored_Script.png)

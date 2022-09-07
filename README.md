@@ -5,26 +5,26 @@
 
 ### Stock Analysis Requirement
 
-Steve is a recently graduated stock analyst, upon graduation he is in the process of reviewing his parents investment portfolio. With his parents keen on upcoming green energy stock, they had a special emphasis on investing in the DQ ticker. But, the goal is to diversify the investment portfolio, so this analysis looks at 12 selected greenstocks and assesses the following;
+Steve is in the process of reviewing his parents investment portfolio. With his parents keen on upcoming green energy stocks, they had interest in investing in the DQ stock ticker. But, the goal is to diversify the investment portfolio, so this analysis looks at 12 selected green energy stocks and assesses the following;
 
-1. The total volume of stocks traded in 2017 and 2018
-2. The annual return for each stock in 2017 and 2018
+1. The total volume of stocks traded in 2017 and 2018 for each ticker
+2. The annual return stocks in 2017 and 2018 for each ticker
 
 ### Methodology - Data Analysis
 
-To analyse the selected ticker data, we use VBA to write code and obtain the desired output. Our initial run of code has seperate loops running through the 2017 and 2018 data sheets, causing inefficiencies in output. But, a goal of this analysis is to refactor the code into a single loop and determine how effectively it runs compared to our code with multiple loops.
+To analyse the selected ticker data, we use VBA to write code and obtain the desired output. Our initial run of code has seperate loops running through the 2017 and 2018 data sheets, causing inefficiencies in output. The goal of this analysis is to refactor the code into a single loop and determine how efficiently it runs compared to our code with multiple loops.
 
-This sections below highlight the approach towards refactoring code in VBA for the stock analysis.
+The sections below highlight the approach towards refactoring code in VBA for the stock analysis.
 
 ## Results
 
 ### Stock Performance (2017 & 2018)
 
-The annual return for the tickers under review convey 2 different stories for 2017 and 2018. The annual return for 4 of the 12 stocks for 2017 were more than a 100% return rate. This means your investment at the start of the year would have doubled by the end of the year for those stocks. Furthermore, 11/12 stocks had a positive return rate, which indicates a diversified investment would give you a healthy return.
+The annual return for the tickers under review convey 2 different stories for 2017 and 2018. The annual return for 4 of the 12 stocks in 2017 were more than a 100% return rate. This means an investment at the start of the year would have doubled by the end of the year for those stocks. Furthermore, 11/12 stocks had a positive return rate, which indicates a diversified investment would give you a healthy return.
 
-Although, in 2018 the story is different. Almost 1/3rd the stocks in 2018 has lost more than 40% of thier stock value, whilst a majority of the sotcks (10/12) have shown a negative return for 2018.
+Although, in 2018 the story is different. Almost 1/3rd the stocks in 2018 had lost more than 40% of thier stock value, whilst a majority of the stocks (10/12) have shown a negative return in 2018.
 
-Given the high returns for 2017 and decline in 2018, the tickers analyzed show a higher degree of volatility and it is recommended to analyze additional stocks under green energy sector or to look at a longer timeframe of analysis.
+Given the high returns in 2017 and decline in 2018, the tickers analyzed show a high degree of volatility and it is recommended to analyze additional stocks under the green energy sector or to look at a longer timeframe of analysis.
 
 The comparison of 2017 and 2018 stock data can be seen below;
 
@@ -32,11 +32,11 @@ The comparison of 2017 and 2018 stock data can be seen below;
 
 ### Execution Time - Original Script
 
-Cosidering the output from the original script, the VBA script has multiple loops running which causes the code to be slightly inefficient. This results in the execution of the script to take almost a full second each (0.95 secs) to run and provide the complete output for each years output. 
+Cosidering the output from the original script, the VBA script has multiple loops running which causes the code to be slightly inefficient. This results in the execution of the script to take almost a full second each (0.95 secs) to run and provide the completed output for each year. 
 
 When executing the code in the original script, we only initialize arrays for all the tickers using `Dim tickers(12) As String` and index each variable for all tickers starting from index = 0 to index = 11.
 
-Then we loop over all rows using a `For Loop` and utilize the `If Then` statement for current tickers to obtain the totalVolume, tickerStartingPrices and tickerEndingPrices for current ticker. (Note examples of code used can be seen in attached VBA_Challenge.xlsm file under **Module1** in VBA)
+Then we loop over all rows using a `For Loop` and utilize the `If Then` statement for current tickers to obtain the totalVolume, tickerStartingPrices and tickerEndingPrices for the current ticker. (Note examples of code used can be seen in attached VBA_Challenge.xlsm file under **Module1** in VBA)
 
 The outputs are then assigned to the "All Stocks Analysis" worksheet using the appropriate code and formatting.
 
@@ -46,9 +46,9 @@ The output format and timing can be seen on the image below;
 
 ### Execution Time - Refactored Script
 
-Once we refactor the initial VBA code into a single loop the script was able to run more efficiently. This can be seen in the run time of the script in the VBA output where both years analysis output time almost cut by 75%, where each script ran in under (0.20 secs).
+Once we refactor the initial VBA code into a single loop the script was able to run more efficiently. This can be seen in the run time of the script in VBA output where both years analysis time almost cut by 75%, where each script ran in under (0.20 secs).
 
-When executing the code in the refactored script, in addition to the initialized array all the tickers using `Dim tickers(12) As String`, We also created new arrays for tickerVolumes, tickerStartingPrices and tickerEndingPrices as follows;
+When executing the code in the refactored script, in addition to the initialized array for all the tickers using `Dim tickers(12) As String`, We also created new arrays for tickerVolumes, tickerStartingPrices and tickerEndingPrices as follows;
 
 `Dim tickerVolumes(12) As Long`
 `Dim tickerStartingPrices(12) As Single`
@@ -74,14 +74,14 @@ The output format and timing can be seen on the image below;
 
 Based on the application of code in the original script and the refactored script the advantages and disadvantages can be stated as follows;
 
-The key observable advantages of refactored code is, the code is cleaner and more efficient to run your analysis on. Furthermore when it comes to automating tasks refactored code will be a better solution to replicating for other analysis and the chance to run into errors are minimized. Because refactored code is cleaner, the ability to debugg is also more straightforward. Furthermore, refactored code enables the user to avoid magic numbers and kludges in your code.
+The key observable advantages of refactored code is, the code is cleaner and more efficient to run your analysis on. Furthermore when it comes to automating tasks refactored code will be a better solution to replicating for other similar analysis requirements and the chance to run into errors are minimized. Because refactored code is cleaner, the ability to debug code is also more straightforward. Furthermore, refactored code enables the user to avoid magic numbers and kludges in code.
 
-Considering disadvantages, refactoring code requires a higher level of competence and may be time consuming. It may not be worthwhile pursuing for smaller analytical outputs. But given the advantages it is best to pursue refactored code to build competence and automate task further.
+Considering disadvantages, refactoring code requires a higher level of competence and may be time consuming. It may not be worthwhile pursuing for smaller analytical outputs. But given the advantages it is best to pursue refactored code to build competence and automate tasks further.
 
 ### Application of Pros and Cons to Original and Refactored VBA Script
 
-Given the pro's and con's in analysing the stock-analysis data through VBA through both scripts, the obvious standout advantage is the run time of the script after refactoring it. In the original script the run time was near 0.95 seconds for each year the script was run (2017 and 2018). But, post refactoring this was brought down to about 0.17 seconds run time once refactored. 
+Given the pro's and con's in analysing the stock-analysis data through VBA through both scripts, the obvious standout advantage is the run time of the script after refactoring it. In the original script the run time was near 0.95 seconds for each year the script was run (2017 and 2018). But, post refactoring this was brought down to about 0.17 seconds run time. 
 
 The absolute run time does not seem much of a difference as a >1 second run time seems fairly efficient, but in relation to a 0.16 run time, the original script needs atleast 6 times longer to run and provide the same output.
 
-Despite the cleaner and efficient approach of using a refactored script, the additional time spent refactoring was significant compared to the time saved in running the analysis. Furthermore, a less experienced analyst may not clearly understand what additional lines of code were used to refactor the data, so it is crucial that appropriate statements are used to define changes made when refactoring the code.
+Despite the cleaner and efficient approach of using a refactored script, the additional time spent refactoring was significant compared to the time saved in running the analysis. Furthermore, a less experienced analyst may not clearly understand what additional lines of code were used to refactor the code, so it is crucial that appropriate statements are used to define changes made when refactoring the code.
